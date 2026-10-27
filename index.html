@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#9d3027" />
+  <meta name="description" content="An interactive pair debate lesson exploring whether Wes Anderson's style adds substance or overwhelms the story." />
+  <title>Wes Anderson — Style or Substance?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" id="top">
+    <nav class="topbar shell">
+      <a class="brand" href="#top"><span>WA</span> Debate Society</a>
+      <div class="chapter-nav"><a href="#board">Film board</a><a href="#debate">Debate</a><a href="#verdict">Verdict</a></div>
+      <div class="folio">Pair lesson · 01</div>
+    </nav>
+    <div class="hero-inner shell">
+      <p class="director-label">A debate lesson inspired by the films of</p>
+      <h1><span>Wes Anderson</span><strong>Style or<br>substance?</strong></h1>
+      <div class="hero-motion">
+        <span class="motion-no">The motion</span>
+        <p>Wes Anderson’s distinctive style <em>deepens</em> his films instead of getting in the way of the story.</p>
+      </div>
+      <div class="poster-triptych" aria-label="Visual references">
+        <figure><img src="assets/french-dispatch-reference.png" alt="Pink vintage film poster with a typewriter"><figcaption>Composition</figcaption></figure>
+        <figure class="feature"><img src="assets/eclectica-reference.png" alt="Symmetrical vintage hotel reception"><figcaption>Atmosphere</figcaption></figure>
+        <figure><img src="assets/grand-budapest-reference.png" alt="Pink Grand Budapest Hotel poster"><figcaption>Story</figcaption></figure>
+      </div>
+      <a class="enter-button" href="#roles">Begin the debate <span>↓</span></a>
+    </div>
+    <div class="hero-rule"><span>Specific film</span><i></i><span>Specific detail</span><i></i><span>Fair challenge</span></div>
+  </header>
+
+  <button class="toolkit-mobile-toggle" id="toolkitToggle" aria-expanded="false">Language toolkit</button>
+  <aside class="toolkit" id="toolkit" aria-label="Language toolkit">
+    <div class="toolkit-head"><div><small>Keep visible</small><h2>Language toolkit</h2></div><button id="closeToolkit" aria-label="Close toolkit">×</button></div>
+    <p class="toolkit-note">Tap a phrase to copy it. Colours show its job.</p>
+    <div class="tool-group challenge">
+      <h3><span></span>Acknowledge + challenge</h3>
+      <button>I see your point, but…</button>
+      <button>I can see why you’d think that, although…</button>
+      <button>I agree to some extent, but…</button>
+      <button>You may have a point, but…</button>
+    </div>
+    <div class="tool-group soften">
+      <h3><span></span>Qualify + soften</h3>
+      <button>That may be true in some cases, but…</button>
+      <button>I’m not completely convinced.</button>
+      <button>I’d look at it slightly differently.</button>
+      <button>I’m not sure I’d go that far.</button>
+    </div>
+    <div class="tool-group evidence">
+      <h3><span></span>Bring evidence</h3>
+      <button>For me, [film] works / falls flat because…</button>
+      <button>The strongest example for my view is…, because…</button>
+      <button>That may be true of this film, yet…</button>
+    </div>
+    <div class="tool-group probe">
+      <h3><span></span>Probe the claim</h3>
+      <button>Which film makes you think that?</button>
+      <button>Would you say that about all his films?</button>
+      <button>What would someone who disagrees point to?</button>
+    </div>
+  </aside>
+
+  <main class="lesson" id="lesson">
+    <div class="lesson-content">
+      <section class="chapter roles-section" id="roles">
+        <div class="chapter-number">00 · Casting</div>
+        <div class="chapter-heading"><p>Take a position</p><h2>Two critics.<br>One motion.</h2></div>
+        <div class="role-cards">
+          <article class="role-card pro">
+            <div class="role-label">Anastasia A · For</div>
+            <h3>Style deepens the story.</h3>
+            <p>The visual precision adds meaning, emotion and a language of its own.</p>
+            <button class="role-select" data-role="pro">Take this side</button>
+          </article>
+          <div class="versus">VS</div>
+          <article class="role-card skeptic">
+            <div class="role-label">Anastasia B · Skeptic</div>
+            <h3>Style gets in the way.</h3>
+            <p>The polish can feel repetitive, precious or emotionally distant.</p>
+            <button class="role-select" data-role="skeptic">Take this side</button>
+          </article>
+        </div>
+        <div class="evidence-rule"><span>Evidence rule</span><p>“It’s just weird” and “It’s beautiful” are openings, not arguments. Ask: <strong>What detail in which film makes you say that?</strong></p></div>
+      </section>
+
+      <section class="chapter board-section" id="board">
+        <div class="chapter-number">01 · First impressions</div>
+        <div class="chapter-heading"><p>Choose a card</p><h2>The six-film board</h2><span>Choose the film you would most want to watch—or avoid. Then name the visual detail that led you there.</span></div>
+        <div class="film-grid" id="filmGrid"></div>
+        <div class="reaction-desk">
+          <div class="ticket-title"><small>Your first reaction</small><strong id="reactionFilm">Choose a film card above</strong></div>
+          <div class="reaction-choice" role="group" aria-label="Would you watch or avoid it?">
+            <button data-reaction="watch">I’d watch it</button><button data-reaction="avoid">I’d avoid it</button>
+          </div>
+          <div class="speaking-frames reaction-frames">
+            <p>Answer frames — choose one and complete it aloud:</p>
+            <button data-frame="The colour palette makes it look…">The colour palette makes it look…</button>
+            <button data-frame="The composition suggests that the story will be…">The composition suggests that the story will be…</button>
+            <button data-frame="The character at the centre makes me expect…">The character at the centre makes me expect…</button>
+          </div>
+          <div class="frame-line">For me, this film looks <span id="reactionWord">appealing / unappealing</span> because <span id="reactionPreview">the poster suggests…</span></div>
+        </div>
+      </section>
+
+      <section class="chapter case-section" id="debate">
+        <div class="chapter-number">02 · Build your case</div>
+        <div class="chapter-heading"><p>Select two exhibits</p><h2>Evidence before opinion.</h2><span>Choose two films that support your assigned side, then use the displayed frames to build your opening statement aloud.</span></div>
+        <div class="case-builder">
+          <div class="mini-film-list" id="caseFilmList"></div>
+          <div class="case-file">
+            <div class="case-file-head"><span>Case file</span><strong id="caseRole">Choose your role above</strong></div>
+            <div id="caseNotes" class="case-notes"><p>Your selected evidence will appear here.</p></div>
+            <div class="generated-case" id="generatedCase">“The strongest example for my view is…”</div>
+            <p class="speak-note">Say both frames, then ask your partner which example sounds stronger.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter hotseat-section">
+        <div class="chapter-number">03 · Hot-seat claims</div>
+        <div class="chapter-heading"><p>Respond, support, probe</p><h2>Challenge the claim,<br>not the taste.</h2></div>
+        <div class="claim-machine">
+          <div class="claim-window"><span id="claimNumber">Claim 01 / 04</span><blockquote id="claimText">“Every Wes Anderson film looks like the same film in different costumes.”</blockquote></div>
+          <div class="claim-controls"><button id="prevClaim">← Previous</button><button class="stamp" id="randomClaim">Pick a claim</button><button id="nextClaim">Next →</button></div>
+          <div class="response-checks"><label><input type="checkbox"> I used a toolkit phrase</label><label><input type="checkbox"> I named a film detail</label><label><input type="checkbox"> I asked a follow-up</label></div>
+        </div>
+      </section>
+
+      <section class="chapter cross-section">
+        <div class="chapter-number">04 · Cross-examination</div>
+        <div class="chapter-heading"><p>Defend the difficult example</p><h2>Make your own case harder.</h2><span>Choose the film that weakens your position. Explain what your opponent could say, then answer it.</span></div>
+        <div class="cross-layout">
+          <div class="difficult-draw">
+            <span class="mini-label">Your difficult film</span><div class="draw-poster" id="drawPoster"><b>?</b></div><h3 id="drawTitle">Draw a film</h3><button class="stamp" id="drawFilm">Draw at random</button>
+          </div>
+          <div class="cross-prompts speaking-panel">
+            <div class="answer-frame"><span>Opponent’s point</span><strong>“The other side could argue that in this film…”</strong><small>Finish with one scene, character choice or visual detail.</small></div>
+            <div class="answer-frame"><span>Your response</span><strong>“I can see why you value that; however…”</strong><small>Answer fairly, then reconnect to the motion.</small></div>
+            <div class="answer-frame"><span>Follow-up</span><strong>“Would you say that about all his films?”</strong><small>Invite your partner to test the claim.</small></div>
+            <p class="micro-rule">Use two different phrases from the fixed toolkit while you defend your position.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter switch-section">
+        <div class="chapter-number">05 · Switch sides</div>
+        <div class="switch-card">
+          <div class="switch-copy"><p>Temporary role reversal</p><h2>Make the other view sound genuinely convincing.</h2><span>Don’t parody it. Give the strongest fair argument for your partner’s position, then return to your original role.</span></div>
+          <div class="turn-card"><span>Take turns</span><strong>Partner A speaks.<br>Partner B responds.<br>Then swap.</strong></div>
+        </div>
+        <div class="reflection-slip"><span>The strongest argument against my view is…</span><strong>“A recognisable style can become ___ because ___.”</strong></div>
+      </section>
+
+      <section class="chapter verdict-section" id="verdict">
+        <div class="chapter-number">06 · Final verdict</div>
+        <div class="chapter-heading"><p>Recommend one film to a skeptic</p><h2>You must reach<br>a joint decision.</h2><span>Balance accessibility, emotional connection, visual style and one possible drawback.</span></div>
+        <div class="verdict-films" id="verdictFilms"></div>
+        <div class="verdict-form">
+          <div class="verdict-badge"><small>Joint recommendation</small><strong id="verdictFilm">No film selected</strong></div>
+          <div class="answer-frame"><span>Why this film?</span><strong>“It gives a skeptic an accessible way into Anderson’s work because…”</strong></div>
+          <div class="answer-frame"><span>Possible drawback</span><strong>“The style may still feel…, but…”</strong></div>
+          <div class="final-line" id="finalLine">“We’d recommend <span>___</span> to a skeptic because ___. A possible drawback is ___, but ___.”</div>
+          <p class="speak-note">Agree on one joint sentence and deliver it together.</p>
+        </div>
+      </section>
+
+      <section class="chapter exit-section">
+        <div class="chapter-number">07 · Exit reflection</div>
+        <div class="chapter-heading"><p>Close the case</p><h2>What changed?</h2><span>Say both sentences without looking at the toolkit first.</span></div>
+        <div class="exit-cards">
+          <div><span>01</span><strong>“The strongest point I made was… because…”</strong></div>
+          <div><span>02</span><strong>“My view is now clearer because…”</strong></div>
+        </div>
+        <div class="next-film"><p>Point to the film you’d most want to discuss further.</p><div id="exitFilmChoices"></div></div>
+        <div class="completion" id="completion"><span>CASE FILE COMPLETE</span><p>You challenged an idea, supported a position and reached a shared verdict.</p></div>
+      </section>
+    </div>
+  </main>
+
+  <footer><div class="shell"><span>Wes Anderson · Style or Substance?</span><a href="#top">Return to opening ↑</a></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
